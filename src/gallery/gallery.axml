@@ -1,0 +1,13 @@
+<onekit-view onekit-class="weui-gallery {{show ? 'weui-gallery_show' : ''}} {{extClass}}">
+  <onekit-view onekit-class="weui-gallery__info">{{current+1}}/{{currentImgs.length}}</onekit-view>
+  <onekit-swiper onekit-class="weui-gallery__img__wrp" onTap="hideGallery" indicator-dots="{{false}}" onChange="change" current="{{current}}" autoplay="{{false}}" duration="{{500}}">
+    <block a:for="{{currentImgs}}" a:key='index'>
+      <onekit-swiper-item>
+        <onekit-image mode="aspectFit" onekit-class="weui-gallery__img" src="{{item}}"></onekit-image>
+      </onekit-swiper-item>
+    </block>
+  </onekit-swiper>
+  <onekit-view onekit-class="weui-gallery__opr" a:if="{{showDelete}}">
+    <onekit-navigator onTap="deleteImg" onekit-class="weui-gallery__del">删除</onekit-navigator>
+  </onekit-view>
+</onekit-view>

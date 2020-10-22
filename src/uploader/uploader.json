@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "onekit-view":"weixin2alipay/ui/view/view",
+        "onekit-image":"weixin2alipay/ui/image/image",
+        "mp-gallery": "../gallery/gallery"
+    }
+}

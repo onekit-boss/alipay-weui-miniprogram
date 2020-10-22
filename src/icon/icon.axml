@@ -1,0 +1,5 @@
+<import-sjs name='utils' from='./index.wxml.utils.sjs'>
+</import-sjs>
+
+
+<onekit-view onekit-class="{{extClass}} weui-icon" onekit-style="background:{{color}};width:{{size}}px;height:{{ utils.ifSpecialIcon(icon) ? utils.double(size) : size}}px;mask-image:url({{src}});-webkit-mask-image:url({{src}});-moz-mask-image:url({{src}})"></onekit-view>

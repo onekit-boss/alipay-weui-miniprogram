@@ -1,0 +1,9 @@
+<onekit-view onekit-style="display:{{displayStyle}};" onekit-class="wx_loading_view {{extClass}}" animation="{{animationData}}" onekit-id="wx_loading_view">
+    <onekit-view a:if="{{type==='dot-white'}}" onekit-class="loading wx_dot_loading wx_dot_loading_white">
+    </onekit-view>
+    <onekit-view a:elif="{{type==='dot-gray'}}" onekit-class="loading wx_dot_loading"></onekit-view>
+    <onekit-view a:elif="{{type==='circle'}}" onekit-class="weui-loadmore">
+        <onekit-view onekit-class="weui-loading"></onekit-view>
+        <onekit-view onekit-class="weui-loadmore__tips">{{tips}}</onekit-view>
+    </onekit-view>
+</onekit-view>

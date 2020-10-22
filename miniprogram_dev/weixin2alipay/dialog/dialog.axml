@@ -1,0 +1,20 @@
+<onekit-view onTap="close" onekit-class="weui-mask {{!show ? 'weui-mask_hidden' : '' }}" a:if="{{mask}}"></onekit-view>
+<onekit-view a:if="{{show}}" onTap="close" onekit-class="weui-dialog__wrp {{extClass}}">
+    <onekit-view onekit-class="weui-dialog" catchTap="stopEvent">
+      <onekit-view onekit-class="weui-dialog__hd">
+        <onekit-view onekit-class="weui-dialog__title">{{title}}
+          <slot name="title"></slot>
+        </onekit-view>
+      </onekit-view>
+      <onekit-view onekit-class="weui-dialog__bd">
+        <slot></slot>
+      </onekit-view>
+      <onekit-view onekit-class="weui-dialog__ft">
+        <block a:if="{{buttons && buttons.length}}">
+          <onekit-view a:for="{{buttons}}" a:key='index' onekit-class="weui-dialog__btn {{item.className}} {{item.extClass}}" hover-class="weui-active" data-index="{{index}}" onTap="buttonTap">{{item.text}}</onekit-view>
+        </block>
+        <slot name="footer" a:else></slot>
+      </onekit-view>
+    </onekit-view>
+</onekit-view>
+

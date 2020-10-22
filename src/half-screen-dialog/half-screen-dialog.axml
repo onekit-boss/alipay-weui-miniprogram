@@ -1,0 +1,35 @@
+<onekit-view onekit-class="{{show ? 'weui-show' :'weui-hidden'}}">
+  <onekit-view onekit-class="weui-mask init" a:if="{{mask}}" onTap="close" catch:touchmove="onMaskMouseMove" data-type="tap"></onekit-view>
+  <onekit-view onekit-class="weui-half-screen-dialog {{extClass}}">
+    <onekit-view onekit-class="weui-half-screen-dialog__hd">
+      <onekit-view a:if="{{closabled}}" onekit-class="weui-half-screen-dialog__hd__side" onTap="close" data-type="close">
+        <onekit-view onekit-class="weui-icon-btn weui-icon-btn_close" hover-class="weui-active">关闭</onekit-view>
+      </onekit-view>
+      <onekit-view onekit-class="weui-half-screen-dialog__hd__main">
+        <block a:if="{{title}}">
+          <onekit-text onekit-class="weui-half-screen-dialog__title">{{title}}</onekit-text>
+          <onekit-text onekit-class="weui-half-screen-dialog__subtitle">{{subTitle}}</onekit-text>
+        </block>
+        <block a:else>
+          <onekit-view onekit-class="weui-half-screen-dialog__title"><slot name="title"></slot></onekit-view>
+        </block>
+      </onekit-view>
+      <onekit-view onekit-class="weui-half-screen-dialog__hd__side">
+        <onekit-view onekit-class="weui-icon-btn weui-icon-btn_more" hover-class="weui-active">更多</onekit-view>
+      </onekit-view>
+    </onekit-view>
+    <onekit-view onekit-class="weui-half-screen-dialog__bd">
+      <block a:if="{{title}}">
+        <onekit-view onekit-class="weui-half-screen-dialog__desc">{{desc}}</onekit-view>
+        <onekit-view onekit-class="weui-half-screen-dialog__tips">{{tips}}</onekit-view>
+      </block>
+      <slot name="desc" a:else></slot>
+    </onekit-view>
+    <onekit-view onekit-class="weui-half-screen-dialog__ft">
+      <block a:if="{{buttons && buttons.length}}">
+        <onekit-button a:for="{{buttons}}" a:key='index' type="{{item.type}}" onekit-class="weui-btn {{item.className}}" data-index="{{index}}" onTap="buttonTap">{{item.text}}</onekit-button>
+      </block>
+      <slot name="footer" a:else></slot>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

@@ -1,0 +1,29 @@
+<onekit-view onekit-class="weui-msg {{extClass}}">
+  <onekit-view onekit-class="weui-msg__icon-area">
+    <onekit-icon type="{{type}}" size="{{size}}" a:if="{{type}}"></onekit-icon>
+    <onekit-image onekit-class="weui-msg__icon-img" src="{{icon}}" mode="aspectFit" a:elif="{{icon}}"></onekit-image>
+  </onekit-view>
+  <onekit-view onekit-class="weui-msg__text-area">
+    <onekit-view onekit-class="weui-msg__title">{{title}}</onekit-view>
+    <onekit-view onekit-class="weui-msg__desc">
+      {{desc}}
+      <slot name="desc" a:if="{{!desc}}"></slot>
+    </onekit-view>
+    <slot name="extend"></slot>
+  </onekit-view>
+  <onekit-view onekit-class="weui-msg__opr-area">
+    <onekit-view onekit-class="weui-btn-area">
+      <slot name="handle"></slot>
+    </onekit-view>
+  </onekit-view>
+  <onekit-view onekit-class="weui-msg__tips-area">
+    <onekit-view onekit-class="weui-msg__tips">
+      <slot name="tips"></slot>
+    </onekit-view>
+  </onekit-view>
+  <onekit-view onekit-class="weui-msg__extra-area">
+    <onekit-view onekit-class="weui-footer">
+      <slot name="footer"></slot>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>

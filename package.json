@@ -1,6 +1,6 @@
 {
-  "name": "weixin2alipay",
-  "version": "1.1.2",
+  "name": "alipay-weui-miniprogram",
+  "version": "1.0.1",
   "description": "",
   "main": "es/index.js",
   "scripts": {
@@ -39,7 +39,9 @@
   },
   "author": "xushengni,sanfordsusn",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "weixin2alipay": "latest"
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",

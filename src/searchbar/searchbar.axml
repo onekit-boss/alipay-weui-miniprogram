@@ -1,0 +1,19 @@
+<onekit-view onekit-class="weui-search-bar {{searchState ? 'weui-search-bar_focusing' : ''}} {{extClass}}">
+    <onekit-view onekit-class="weui-search-bar__form">
+        <onekit-view onekit-class="weui-search-bar__box">
+            <onekit-icon onekit-class="weui-icon-search" type="search" size="12"></onekit-icon>
+            <onekit-input type="text" onekit-class="weui-search-bar__input" placeholder="{{placeholder}}" value="{{value}}" focus="{{focus}}" onBlur="inputBlur" onFocus="inputFocus" onInput="inputChange"></onekit-input>
+            <onekit-text onekit-class="weui-icon-clear" hover-class="weui-active" a:if="{{value.length > 0}}" onTap="clearInput"></onekit-text>
+        </onekit-view>
+        <onekit-label onekit-class="weui-search-bar__label" onTap="showInput">
+            <onekit-icon onekit-class="weui-icon-search" type="search" size="12"></onekit-icon>
+            <onekit-text onekit-class="weui-search-bar__text">搜索</onekit-text>
+        </onekit-label>
+    </onekit-view>
+    <onekit-view a:if="{{cancel && searchState}}" onekit-class="weui-search-bar__cancel-btn" onTap="hideInput">{{cancelText}}</onekit-view>
+</onekit-view>
+<mp-cells ext-class=" {{'searchbar-result ' + extClass}}" a:if="{{searchState && result.length > 0}}">
+    <mp-cell a:for="{{result}}" a:key='index' class="result" onTap="selectResult" body-class="weui-cell_primary" data-index="{{index}}" hover>
+        <onekit-view>{{item.text}}</onekit-view>
+    </mp-cell>
+</mp-cells> 

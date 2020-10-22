@@ -1,0 +1,10 @@
+<onekit-view onekit-class="weui-tabbar {{extClass}}">
+  
+  <onekit-view a:for="{{list}}" a:key='index' data-index="{{index}}" onTap="tabChange" onekit-class="weui-tabbar__item {{index === current ? 'weui-bar__item_on' : ''}}">
+    <onekit-view onekit-style="position: relative;display:inline-block;">
+      <onekit-image src="{{current === index ? item.selectedIconPath : item.iconPath}}" onekit-class="weui-tabbar__icon"></onekit-image>
+      <mp-badge a:if="{{item.badge || item.dot}}" content="{{item.badge}}" style="position: absolute;top:-2px;left:calc(100% - 3px)"></mp-badge>
+    </onekit-view>
+    <onekit-view onekit-class="weui-tabbar__label">{{item.text}}</onekit-view>
+  </onekit-view>
+</onekit-view>

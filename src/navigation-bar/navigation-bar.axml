@@ -1,0 +1,32 @@
+<onekit-view onekit-class="weui-navigation-bar {{extClass}}">
+  <onekit-view onekit-class="weui-navigation-bar__placeholder {{ios ? 'ios' : 'android'}}" onekit-style="padding-top: {{statusBarHeight}}px;visibility: hidden;"></onekit-view>
+  <onekit-view onekit-class="weui-navigation-bar__inner {{ios ? 'ios' : 'android'}}" onekit-style="padding-top: {{statusBarHeight}}px; color: {{color}};background: {{background}};{{displayStyle}};{{innerPaddingRight}};{{innerWidth}};">
+
+    <onekit-view onekit-class="weui-navigation-bar__left" onekit-style="{{leftWidth}}">
+      <block a:if="{{back}}">
+        <onekit-view onekit-class="weui-navigation-bar__buttons">
+          <onekit-view onTap="back" onekit-class="weui-navigation-bar__button weui-navigation-bar__btn_goback" hover-class="weui-active"></onekit-view>
+        </onekit-view>
+      </block>
+      <block a:else>
+        <slot name="left"></slot>
+      </block>
+    </onekit-view>
+
+    <onekit-view onekit-class="weui-navigation-bar__center">
+      <onekit-view a:if="{{loading}}" onekit-class="weui-navigation-bar__loading">
+        <onekit-view onekit-class="weui-loading" onekit-style="width:{{size.width}}rpx;height:{{size.height}}rpx;"></onekit-view>
+      </onekit-view>
+      <block a:if="{{title}}">
+        <onekit-text>{{title}}</onekit-text>
+      </block>
+      <block a:else>
+        <slot name="center"></slot>
+      </block>
+    </onekit-view>
+
+    <onekit-view onekit-class="weui-navigation-bar__right">
+      <slot name="right"></slot>
+    </onekit-view>
+  </onekit-view>
+</onekit-view>
