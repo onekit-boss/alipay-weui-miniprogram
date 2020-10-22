@@ -8,7 +8,7 @@ const isWatch = process.argv.indexOf('--watch') >= 0
 const demoSrc = path.resolve(__dirname, './demo')
 const demoDist = path.resolve(__dirname, '../miniprogram_dev')
 const src = path.resolve(__dirname, '../src')
-const dev = path.join(demoDist, 'weixin2alipay')
+const dev = path.join(demoDist, 'components')
 const dist = path.resolve(__dirname, '../es')
 
 module.exports = {

@@ -1,1 +1,0 @@
-<onekit-view onekit-class="weui-badge {{extClass}} {{!content ? 'weui-badge_dot' : ''}}">{{content}}</onekit-view>

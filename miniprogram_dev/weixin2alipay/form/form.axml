@@ -1,3 +1,0 @@
-<onekit-view onekit-class="{{extClass}}">
-    <slot></slot>
-</onekit-view>

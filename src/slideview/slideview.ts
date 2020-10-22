@@ -1,4 +1,4 @@
-import OnekitComponent from 'weixin2alipay/OnekitComponent';
+import {wx,OnekitComponent} from 'weixin2alipay'
 
 OnekitComponent({
     /**

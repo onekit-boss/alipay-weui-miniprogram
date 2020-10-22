@@ -1,6 +1,6 @@
 import FormValidator from './form-validator'
 import { diffObject } from '../utils/object'
-import OnekitComponent from 'weixin2alipay/OnekitComponent';
+import {wx,OnekitComponent} from 'weixin2alipay'
 
 function linked(target) {
     if (target.data.prop) {

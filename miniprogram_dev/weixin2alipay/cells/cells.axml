@@ -1,8 +1,0 @@
-<onekit-view onekit-class="{{extClass}} weui-cells__group {{outerClass}} {{childClass}}">
-    <onekit-view a:if="{{title}}" onekit-class="weui-cells__title">{{title}}</onekit-view>
-    <onekit-view onekit-class="weui-cells weui-cells_after-title {{checkboxCount > 0 && checkboxIsMulti ? 'weui-cells_checkbox' : ''}}">
-        <slot></slot>
-    </onekit-view>
-    <onekit-view a:if="{{footer}}" onekit-class="weui-cells__tips">{{footer}}</onekit-view>
-    <slot name="footer" a:else></slot>
-</onekit-view>

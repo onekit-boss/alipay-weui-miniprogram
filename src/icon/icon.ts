@@ -1,6 +1,6 @@
 import Base64 from './base64'
 import iconData from './icondata'
-import OnekitComponent from 'weixin2alipay/OnekitComponent';
+import {wx,OnekitComponent} from 'weixin2alipay'
 
 const getFixedIconType = function (type: string): string {
     // 兼容旧版本 typo

@@ -1,9 +1,0 @@
-{
-    "component": true,
-    "usingComponents": {
-        "onekit-view":"weixin2alipay/ui/view/view",
-        "onekit-image":"weixin2alipay/ui/image/image",
-        "mp-cell": "../cell/cell",
-        "mp-checkbox-group": "../checkbox-group/checkbox-group"
-    }
-}
