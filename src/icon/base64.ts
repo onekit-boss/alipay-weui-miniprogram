@@ -1,4 +1,5 @@
 /* eslint-disable */
+import {global} from 'weixin2alipay'
 var b64chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 var cb_encode = function(ccc) {
     var padlen = [0, 2, 1][ccc.length % 3],
