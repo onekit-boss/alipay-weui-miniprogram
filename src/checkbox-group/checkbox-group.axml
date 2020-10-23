@@ -1,6 +1,6 @@
-<onekit-checkbox-group onekit-class="{{extClass}}" wx-if="{{multi}}" onChange="checkedChange">
+<checkbox-group class="{{extClass}}" wx-if="{{multi}}" onChange="checkedChange">
     <slot></slot>
-</onekit-checkbox-group>
-<onekit-radio-group onekit-class="{{extClass}}" wx-else onChange="checkedChange">
+</checkbox-group>
+<radio-group class="{{extClass}}" wx-else onChange="checkedChange">
     <slot></slot>
-</onekit-radio-group>
+</radio-group>

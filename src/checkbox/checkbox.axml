@@ -1,14 +1,14 @@
 <mp-cell has-footer="{{!multi}}" has-header="{{multi}}" onTap="checkedChange" ext-class="weui-check__label {{outerClass}} {{extClass}} {{!multi ? '^weui-cell_radio' : '^weui-cell_checkbox'}}" ext-hover-class="weui-active">
 
   <onekit-view slot="icon" a:if="{{multi}}">
-    <onekit-checkbox value="{{value}}" checked="{{checked}}" disabled="{{disabled}}" color="{{color}}" onekit-class="weui-check">
-    </onekit-checkbox>
+    <checkbox value="{{value}}" checked="{{checked}}" disabled="{{disabled}}" color="{{color}}" class="weui-check">
+    </checkbox>
     
     <onekit-icon onekit-class="weui-icon-checked"></onekit-icon>
   </onekit-view>
   <onekit-view>{{label}}</onekit-view>
   <onekit-view slot="footer" a:if="{{!multi}}">
-    <onekit-radio value="{{value}}" checked="{{checked}}" disabled="{{disabled}}" color="{{color}}" onekit-class="weui-check"></onekit-radio>
+    <radio value="{{value}}" checked="{{checked}}" disabled="{{disabled}}" color="{{color}}" class="weui-check"></radio>
     
     <onekit-icon onekit-class="weui-icon-checked"></onekit-icon>
   </onekit-view>

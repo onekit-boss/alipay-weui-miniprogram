@@ -1,5 +1,5 @@
 /* eslint-disable */
-import {global} from 'weixin2alipay'
+import {GLOBAL} from 'weixin2alipay'
 var b64chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 var cb_encode = function(ccc) {
     var padlen = [0, 2, 1][ccc.length % 3],
@@ -15,9 +15,9 @@ var cb_encode = function(ccc) {
     return chars.join('');
 };
 // @ts-ignore
-var btoa = global.btoa ? function(b) {
+var btoa = GLOBAL.btoa ? function(b) {
     // @ts-ignore
-    return global.btoa(b);
+    return GLOBAL.btoa(b);
 } : function(b) {
     return b.replace(/[\s\S]{1,3}/g, cb_encode);
 };

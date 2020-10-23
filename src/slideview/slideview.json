@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "onekit-view":"weixin2alipay/ui/view/view",
+    "onekit-text":"weixin2alipay/ui/text/text",
     "onekit-image":"weixin2alipay/ui/image/image"
   }
 }
