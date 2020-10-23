@@ -18,7 +18,7 @@
     "lint": "eslint \"src/**/*.js\"",
     "lint-tools": "eslint \"tools/**/*.js\" --rule \"import/no-extraneous-dependencies: false\""
   },
-  "miniprogram": "es",
+  "miniprogram": "miniprogram_dist",
   "jest": {
     "testEnvironment": "jsdom",
     "testURL": "https://jest.test",

@@ -520,3 +520,5 @@ miniprogram_dev/example/toast/toast.axml
 miniprogram_dev/example/toptips/toptips.axml
 miniprogram_dev/example/uploader/uploader.axml
 miniprogram_dev/package-lock.json
+miniprogram_dev/package-lock.json
+miniprogram_dev/components/icon/icon.utils.sjs

@@ -1,4 +1,4 @@
-<import-sjs name='utils' from='./index.wxml.utils.sjs'>
+<import-sjs name='utils' from='./actionsheet.utils.sjs'>
 </import-sjs>
 
 
